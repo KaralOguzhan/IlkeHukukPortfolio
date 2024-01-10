@@ -1,0 +1,36 @@
+﻿@model List<IlkeHukukBurosu.DAL.Entities.Address>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Telefon</th>
+            <th>Açık Adres</th>
+            <th>E Mail Adresi </th>
+            <th>LinkedIn Url</th>
+            <th>Ofisin Adı</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.AddressID</td>
+                <td>@item.Phone</td>
+                <td>@item.AddressDef</td>
+                <td>@item.Email</td>
+                <td>@item.Linkedin</td>
+                <td>@item.OfficeName</td>
+                <td><a href="/Address/DeleteAddress/@item.AddressID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Address/UpdateAddress/@item.AddressID" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Address/CreateAddress" class="btn btn-primary">Yeni Adres Girişi</a>
+</div>

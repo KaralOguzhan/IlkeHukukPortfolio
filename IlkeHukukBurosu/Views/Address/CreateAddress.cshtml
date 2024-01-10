@@ -1,0 +1,28 @@
+﻿@model IlkeHukukBurosu.DAL.Entities.Address
+@{
+    ViewData["Title"] = "CreateAddress";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<br />
+<br />
+<div class="container">
+    <form method="post">
+        <label>Telefon Numarası</label>
+        <input type="text" asp-for="Phone" class="form-control" />
+        <br />
+        <label>Açık Adres</label>
+        <input type="text" asp-for="AddressDef" class="form-control" />
+        <br />
+        <label>Mail Adresi</label>
+        <input type="text" asp-for="Email" class="form-control" />
+        <br />
+        <label>LinkenId Url</label>
+        <input type="text" asp-for="Linkedin" class="form-control" />
+        <br />
+        <label>Ofis Adı</label>
+        <input type="text" asp-for="OfficeName" class="form-control" />
+        <br />
+        <button class="btn btn-primary">Adres Ekle</button>
+    </form>
+</div>

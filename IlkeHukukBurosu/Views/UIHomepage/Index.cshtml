@@ -1,0 +1,80 @@
+﻿
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/UILayout/Index.cshtml";
+	var count = 0;
+}
+
+<main class="main-content">
+	<div class="hero">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<figure><img src="~/Lawyer/dummy/lawyers.jpg" alt=""></figure>
+				</div>
+				<div class="col-md-4">
+					<div class="hero-content">
+						<h1 class="hero-title">Bu alana başlık yazılacak</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi accusamus aut rerum sed maxime, magnam neque sapiente quidem</p>
+						<a href="#" class="button">DAHA FAZLA OKU</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- .hero-slider -->
+
+	<div class="fullwidth-block" data-bg-color="#111113">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<h2>Web Sayfamıza Hoş Geldiniz!</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto labore alias nobis quam suscipit aut nostrum neque quibusdam eligendi explicabo, animi, eius beatae. Deleniti at, nam fuga accusamus non reprehenderit.  amet, consectetur adipisicing elit. Architecto labore alias nobis quam suscipit aut nostrum neque quibusdam eligendi explicabo, animi, eius beatae. Deleniti at, nam fuga accusamus non reprehenderit.</p>
+				</div>
+				<div class="col-md-4">
+					<div class="latest-news">
+						<h3>Güncel Haberler</h3>
+						<ul>
+							<li>
+								<h3 class="entry-title"><a href="#">Enim ad minim veniam quis nostrud</a></h3>
+								<small class="date">07/04/2023</small>
+							</li>
+							<li>
+								<h3 class="entry-title"><a href="#">Duis aute irure dolor in reprehenderit</a></h3>
+								<small class="date">07/04/2023</small>
+							</li>
+						</ul>
+					</div> <!-- .latest-news -->
+				</div>
+			</div> <!-- .row -->
+		</div> <!-- .container -->
+	</div> <!-- .fullwidth-block -->
+
+	<div class="fullwidth-block">
+		<div class="container">
+			<div class="row feature-list-section">
+				@foreach (var item in Model)
+				{
+					if (count<3)
+					{
+					<div class="col-md-4">
+						<div class="feature boxed">
+							<header>
+								<img src="~/Lawyer/images/icon-1.png" class="feature-icon">
+								<div class="feature-title-copy">
+									<h2 class="feature-title">@item.Title</h2>
+									<small class="feature-subtitle">Lorem ipsum dolor sit</small>
+								</div>
+							</header>
+							<p>@item.Info</p>
+						</div>
+					</div>
+					}
+					count++;
+				}
+			</div>
+
+			
+		</div>
+	</div>
+
+</main>

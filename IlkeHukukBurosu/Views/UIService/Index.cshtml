@@ -1,0 +1,42 @@
+﻿@model List<IlkeHukukBurosu.DAL.Entities.Service>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<main class="main-content">
+
+	<div class="fullwidth-block content">
+		<div class="container">
+			<h2 class="entry-title">Merhabalar İlke Hukuk Bürosu olarak çalışma alanlarımıza aşağıdan ulaşabilirsiniz.</h2>
+
+			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+			
+			@foreach (var item in Model)
+			{
+				<div class="col-md-4">
+					<div class="feature boxed">
+						<header>
+							<img src="~/Lawyer/images/icon-1.png" class="feature-icon">
+							<div class="feature-title-copy">
+								<h2 class="feature-title">@item.Title</h2>
+								<small class="feature-subtitle">Lorem ipsum dolor sit</small>
+							</div>
+						</header>
+						<p>@item.Info</p>
+					</div>
+				</div>
+			}
+			<div class="row">
+				
+				
+			</div>
+			
+
+			<div class="cta">
+				if you areinterested - <a href="#">Call Us</a>
+			</div>
+		</div>
+	</div>
+
+</main>

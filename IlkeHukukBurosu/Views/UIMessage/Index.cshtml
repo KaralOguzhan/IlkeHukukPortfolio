@@ -1,0 +1,51 @@
+﻿@model IlkeHukukBurosu.DAL.Entities.Contact
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<main class="main-content">
+
+	<div class="fullwidth-block content">
+		<div class="container">
+			<h2 class="entry-title">BİZE ULAŞMAK İÇİN AŞAĞIDAKİ BAĞLANTILARI KULLANABİLİRSİNİZ</h2>
+
+			<div class="row contact-info">
+				<div class="col-md-6">
+					<div class="map-container">
+						<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.015063962963!2d28.98164237723443!3d41.068663365702534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab6e2282f7a95%3A0x745b3d933ec469ed!2s%C4%B0stanbul%20Adalet%20Saray%C4%B1!5e0!3m2!1str!2str!4v1704844651514!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+						<div class="row">
+							<div class="col-md-4">
+								<address>
+									<strong>Address</strong>
+									<p>Hamidiye Mah. <br>34200 <br>Kağıthane / İstanbul</p>
+								</address>
+							</div>
+							<div class="col-md-8">
+								<div class="contact">
+									<strong>Contact</strong>
+									<p>
+										<a href="tel:532930098891">(532) 930 098 891</a>
+										<a href="mailto:simge_karal@yahoo.com">simge_karal@yahoo.com</a> <br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<form method="post" class="contact-form">
+						<input type="text" asp-for="NameSurname" placeholder="Ad Soyad...">
+						<input type="text" asp-for="Email" placeholder="Email...">
+						<input type="text"asp-for="Phone" placeholder="Telefon Numarası...">
+						<textarea asp-for="Text" placeholder="Mesajınızı Giriniz..."></textarea>
+						<div class="text-right">
+							<input type="submit" value="Mesaj Gönder">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</main>

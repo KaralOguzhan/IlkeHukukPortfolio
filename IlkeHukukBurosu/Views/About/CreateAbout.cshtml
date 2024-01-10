@@ -1,0 +1,25 @@
+﻿@model IlkeHukukBurosu.DAL.Entities.About
+@{
+    ViewData["Title"] = "CreateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<br />
+<br />
+<div class="container">
+    <form method="post">
+        <label>Ad Soyad</label>
+        <input type="text" asp-for="NameSurname" class="form-control" />
+        <br />
+        <label>Ünvan</label>
+        <input type="text" asp-for="Title" class="form-control" />
+        <br />
+        <label>Kişi Hakkında Bilgi</label>
+        <input type="text" asp-for="Info" class="form-control" />
+        <br />
+        <label>Fotoğraf Url</label>
+        <input type="text" asp-for="ImgUrl" class="form-control" />
+        <br />
+        <button class="btn btn-primary">Kişiyi Ekle</button>
+    </form>
+</div>

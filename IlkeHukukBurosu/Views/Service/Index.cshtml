@@ -1,0 +1,30 @@
+﻿@model List<IlkeHukukBurosu.DAL.Entities.Service>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Hizmet Adı</th>
+            <th>Hizmet Başlığı</th>
+            <th>Hizmet Açıklaması</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ServiceID</td>
+                <td>@item.Title</td>
+                <td>@item.Info</td>
+                <td><img src="@item.ImgUrl" style="height:70px"> </td>
+                <td><a href="/Service/DeleteService/@item.ServiceID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Service/UpdateService/@item.ServiceID" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Service/CreateService" class="btn btn-primary">Yeni Hizmet Girişi</a>
+</div>

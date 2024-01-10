@@ -1,0 +1,29 @@
+﻿@model List<IlkeHukukBurosu.DAL.Entities.About>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<main class="main-content">
+
+	<div class="fullwidth-block content">
+		<div class="container">
+			
+			@foreach (var item in Model)
+			{
+				<h2 class="entry-title">Herkese merhaba, Ben @item.Title @item.NameSurname .</h2>
+				<p>@item.Info </p>
+				<div class="team">
+					<figure class="team-image"><img src="@item.ImgUrl" alt="person-1"></figure>
+					<h3 class="team-name">@item.NameSurname</h3>
+					<small class="team-desc">@item.Title</small>
+					<p>@item.Info</p>
+				</div>
+			}
+
+			
+			
+		</div>
+	</div>
+
+</main>

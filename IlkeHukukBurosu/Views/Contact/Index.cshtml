@@ -1,0 +1,32 @@
+﻿@model List<IlkeHukukBurosu.DAL.Entities.Contact>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+ <br /><br>
+ <div class="container">
+     <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Mesaj Atan Kişinin Adı Soyadı</th>
+            <th>Mesaj Atan Kişinin Email Adresi</th>
+            <th>Mesaj Atan Kişinin Telefon Numarası</th>
+            <th>Mesajın İçeriği</th>
+            <th>Sil</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ContactID</td>
+                <td>@item.NameSurname</td>
+                <td>@item.Email</td>
+                <td>@item.Phone</td>
+                <td>@item.Text</td>
+
+                <td><a href="/Contact/DeleteContact/@item.ContactID" class="btn btn-danger">Mesajı Sil</a></td>
+            </tr>
+        }
+     </table>
+ </div>
+
+

@@ -1,0 +1,21 @@
+﻿@model IlkeHukukBurosu.DAL.Entities.Blog
+@{
+    ViewData["Title"] = "CreateBlog";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<br /><br />
+<div class="container">
+    <form method="post">
+        <label>Blog Başlığı</label>
+        <input type="text" asp-for="Title" class="form-control" />
+        <br />
+        <label>Blog İçeriği</label>
+        <input type="text" asp-for="Text" class="form-control" />
+        <br />
+        <label>Blog Fotoğraf</label>
+        <input type="text" asp-for="ImgUrl" class="form-control" />
+        <br />
+        <button class="btn btn-primary">Blog Ekle</button>
+    </form>
+</div>

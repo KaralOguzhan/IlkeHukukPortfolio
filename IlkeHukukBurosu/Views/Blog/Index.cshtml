@@ -1,0 +1,32 @@
+﻿@model List<IlkeHukukBurosu.DAL.Entities.Blog>
+@{
+    
+    
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+ <div class="container">
+     <table class="table table-bordered">
+         <tr>
+             <th>#</th>
+             <th>Blog Başlık</th>
+             <th>Blog İçerik</th>
+             <th>Blog Fotoğraf Url</th>
+             <th>Sil</th>
+             <th>Güncelle</th>
+         </tr>
+         @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.BlogID</td>
+                <td>@item.Title</td>
+                <td>@item.Text</td>
+                <td><img src="@item.ImgUrl" style="height:70px"> </td>
+                <td><a href="/Blog/DeleteBlog/@item.BlogID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Blog/UpdateBlog/@item.BlogID" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+     </table>
+     <a href="/Blog/CreateBlog" class="btn btn-primary">Yeni Blog Girişi</a>
+ </div>
+ 

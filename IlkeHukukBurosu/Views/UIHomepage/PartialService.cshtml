@@ -1,0 +1,18 @@
+﻿@model List<IlkeHukukBurosu.DAL.Entities.Service>
+
+
+@foreach (var item in Model)
+{
+	<div class="col-md-4">
+		<div class="feature boxed">
+			<header>
+				<img src="~/Lawyer/images/icon-1.png" class="feature-icon">
+				<div class="feature-title-copy">
+					<h2 class="feature-title">@item.Title</h2>
+					<small class="feature-subtitle">Lorem ipsum dolor sit</small>
+				</div>
+			</header>
+			<p>@item.Info</p>
+		</div>
+	</div>
+}
